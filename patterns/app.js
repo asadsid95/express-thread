@@ -1,10 +1,12 @@
-class Car {
+// creates node for linked-list
+class Node {
 
-    constructor(model) {
-        this.model = model
+    constructor(element, ref) {
+        this.element = element
+        this.ref = ref
     }
 }
 
-const someCar = new Car('Camry')
+class LinkedList {
 
-console.log(someCar)
+}

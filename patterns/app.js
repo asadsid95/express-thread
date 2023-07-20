@@ -52,12 +52,23 @@ function looping(list) {
 }
 
 // looping(list_null)
-looping(list)
+// looping(list)
 
 
 
 // LinkedList {
 //   head: Node { element: 1,
-            //    next: Node { element: 2,
-            //    next: [Node] } }
+//    next: Node { element: 2,
+//    next: [Node] } }
 //     }
+
+
+console.log(foo)
+// console.log(hello)
+
+{
+    let foo = 2
+    var bar = 3
+    const hello = 'hello'
+    console.log(bar)
+}

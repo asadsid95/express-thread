@@ -1,9 +1,3 @@
-// const factory_method = require("./factory_pattern")
-
-// const objects = factory_method('prop for class1', 'prop for class2')
-
-// console.log(objects)
-
 class Class1 {
     constructor(prop1) {
         this.prop1 = prop1
@@ -28,8 +22,5 @@ function factory_method(prop1_class1, prop1_class2) {
 
 };
 
-const objects = factory_method('prop for class1', 'prop for class2')
-
-objects.forEach(object => {
-    console.log(object.prop1)
-})
+module.export = factory_method;
+// factory_method('prop for class1', 'prop for class2')

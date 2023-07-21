@@ -19,14 +19,16 @@ class Class2 {
 obj1 = new Class1('prop1')
 obj2 = new Class2('prop1')
 
-// however instead of calling object creation, we create a method 
+// [WRONG] however instead of calling object creation, we create a method 
 // that will call the 2 classes to create object
 
-function factory_method(prop1_class1, prop1_class2) {
+// function factory_method(prop1_class1, prop1_class2) {
 
-    return [new Class1(prop1_class1), new Class1(prop1_class2)]
+//     return [new Class1(prop1_class1), new Class1(prop1_class2)]
 
-};
+// };
+
+
 
 const objects = factory_method('prop for class1', 'prop for class2')
 

@@ -30,8 +30,13 @@ obj2 = new Class2('prop1')
 
 
 
-const objects = factory_method('prop for class1', 'prop for class2')
+// const objects = factory_method('prop for class1', 'prop for class2')
 
-objects.forEach(object => {
-    console.log(object.prop1)
-})
+// objects.forEach(object => {
+//     console.log(object.prop1)
+// })
+
+
+var age // null is falsy, 'some string' is truthy, 0 is falsy 
+if (age) { console.log('print bc its truthy') }
+else { console.log('its falsy') }

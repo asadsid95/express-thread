@@ -37,6 +37,44 @@ obj2 = new Class2('prop1')
 // })
 
 
-var age // null is falsy, 'some string' is truthy, 0 is falsy 
-if (age) { console.log('print bc its truthy') }
-else { console.log('its falsy') }
+var age = 222 // null is falsy, 'some string' is truthy, 0 is falsy 
+// if (age === true) { console.log('print bc its truthy') }
+// else { console.log('its falsy') }
+
+var v = ''
+
+// v == true ? console.log('true') : console.log('false')
+
+// v === false ? console.log('true') : console.log('false')
+
+
+function testTruthy(value) {
+    if (value === true) {
+        console.log(value, "is truthy.");
+    } else if (value === false) {
+        console.log(value, "is falsy.");
+    } else {
+        console.log("neither")
+    }
+}
+
+// console.log(typeof ('false'))
+// console.log(2 == 2)
+
+// testTruthy(true);          // Output: true is truthy.
+// testTruthy("Hello");       // Output: Hello is truthy.
+// testTruthy(false);            // Output: 42 is truthy.
+// testTruthy([1, 2, 3]);     // Output: 1,2,3 is truthy.
+// testTruthy({ name: "John" });//
+
+var some_object = {
+    "name": "asad"
+}
+// console.log(typeof (some_object))
+
+//-------------
+
+// import { some_func } from './hoisting'
+const { some_func } = require('./hoisting')
+
+console.log(some_func)

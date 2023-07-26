@@ -1,4 +1,4 @@
-console.log(foo)
+// console.log(foo)
 // console.log(hello)
 
 {
@@ -7,3 +7,10 @@ console.log(foo)
     const hello = 'hello'
     console.log(bar)
 }
+
+function some_func() {
+    console.log('hello this is from hoisting module')
+}
+
+// export { some_func }
+module.exports = { some_func }

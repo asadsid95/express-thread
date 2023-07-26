@@ -17,5 +17,5 @@ function some_func1() {
     return 0
 }
 
-// export { some_func }
-module.exports = { some_func, some_func1 }
+export { some_func, some_func1 }
+// module.exports = { some_func, some_func1 }

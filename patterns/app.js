@@ -16,8 +16,8 @@ class Class2 {
 }
 
 // typical way of creating objects
-obj1 = new Class1('prop1')
-obj2 = new Class2('prop1')
+// obj1 = new Class1('prop1')
+// obj2 = new Class2('prop1')
 
 // [WRONG] however instead of calling object creation, we create a method 
 // that will call the 2 classes to create object
@@ -74,10 +74,10 @@ var some_object = {
 
 //-------------
 
-// import { some_func } from './hoisting'
+import * as Module from './hoisting.js'
 // This is ESM and thus requires tweaking of package.json
 
-const SomeFuncFamily = require('./hoisting')
+// const SomeFuncFamily = require('./hoisting')
 
-console.log(some_func.some_func())
-console.log(some_func.some_func1())
+console.log(Module.some_func())
+console.log(Module.some_func1())

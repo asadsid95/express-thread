@@ -81,5 +81,3 @@ const SomeFuncFamily = require('./hoisting')
 
 console.log(some_func.some_func())
 console.log(some_func.some_func1())
-
-git commit - m "exported multiple features from module and imported them as an object to make code clean"

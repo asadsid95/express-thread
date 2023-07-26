@@ -75,6 +75,11 @@ var some_object = {
 //-------------
 
 // import { some_func } from './hoisting'
-const { some_func } = require('./hoisting')
+// This is ESM and thus requires tweaking of package.json
 
-console.log(some_func)
+const SomeFuncFamily = require('./hoisting')
+
+console.log(some_func.some_func())
+console.log(some_func.some_func1())
+
+git commit - m "exported multiple features from module and imported them as an object to make code clean"

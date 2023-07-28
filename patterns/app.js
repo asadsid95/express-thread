@@ -74,10 +74,17 @@ var some_object = {
 
 //-------------
 
-import * as Module from './hoisting.js'
+// import * as Module from './hoisting.js'
 // This is ESM and thus requires tweaking of package.json
 
 // const SomeFuncFamily = require('./hoisting')
 
-console.log(Module.some_func())
-console.log(Module.some_func1())
+// console.log(Module.some_func())
+// console.log(Module.some_func1())
+
+
+import * as Module from './builder_pattern.js'
+
+var some_building_obj = new Module.Building()
+
+console.log(some_building_obj)

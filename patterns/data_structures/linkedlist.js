@@ -1,16 +1,37 @@
-// creates node for linked-list
-class Node {
-
-    constructor(element) {
-        this.element = element
-        this.next = null
-    }
-}
 
 class LinkedList {
 
     constructor(head = null) {
+
         this.head = head
+    }
+
+    size() {
+
+        var count = 0
+
+        var data = this.head
+
+        while (data) {
+            count++
+            data = data.next
+        }
+        console.log(count)
+    }
+
+    addNode(node) {
+        this.head.next = node.data
+        this.head.data = node.data
+
+        console.log("head: " + this.head.next)
+    }
+}
+
+class Node {
+
+    constructor(data) {
+        this.data = data
+        this.next = null
     }
 }
 
@@ -19,58 +40,31 @@ var second = new Node(2)
 var third = new Node(3)
 var fourth = new Node(4)
 
-var list = new LinkedList(first)
-var list_null = new LinkedList()
+// first.next = second
+// second.next = third
+// third.next = fourth
 
-first.next = second
-second.next = third
-third.next = fourth
+const list = new LinkedList(first)
+// list.size()
+list.addNode(second)
+list.addNode(third)
+list.addNode(fourth)
 
-// console.log(list)
-
-// get size of LL
+console.log(list)
 
 function size(list) {
 
+    var count = 0
 
-    var counter = 0
+    var head = list.head
 
-    curr = list.head
+    while (head) {
+        count++
+        head = head.next
 
-    while (curr.)
-
-}
-
-size(list)
-
-// How to traverse?
-
-function traversing_LL(list) {
-
-    var show_array = []
-
-    // for (let i = 0; i < 10; i++) {
-    while (list.head.element !== null) {
-        var curr = list.head.element
-        var next = list.head.next
-
-        show_array.push(curr)
-
-        curr = next
-        console.log(curr)
-
-        return true
     }
 
-    console.log(show_array)
-
+    console.log(count)
 }
 
-// traversing_LL(list)
-
-// LinkedList {
-//   head: Node { element: 1,
-//    next: Node { element: 2,
-//    next: [Node] } }
-//     }
-
+// size(list)

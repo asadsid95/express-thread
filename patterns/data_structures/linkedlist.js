@@ -28,33 +28,45 @@ third.next = fourth
 
 // console.log(list)
 
-// How to traverse?
+// get size of LL
 
-function looping(list) {
+function size(list) {
 
-    var show_LL_array = []
 
-    while (list.head !== null) {
-        var curr = list.head.element
-        var next = list.head.next
+    var counter = 0
 
-        show_LL_array.push(curr)
+    curr = list.head
 
-        curr = next
-
-    }
-
-    console.log(show_LL_array)
-
-    console.log('returning false')
-    return false
+    while (curr.)
 
 }
 
-// looping(list_null)
-// looping(list)
+size(list)
 
+// How to traverse?
 
+function traversing_LL(list) {
+
+    var show_array = []
+
+    // for (let i = 0; i < 10; i++) {
+    while (list.head.element !== null) {
+        var curr = list.head.element
+        var next = list.head.next
+
+        show_array.push(curr)
+
+        curr = next
+        console.log(curr)
+
+        return true
+    }
+
+    console.log(show_array)
+
+}
+
+// traversing_LL(list)
 
 // LinkedList {
 //   head: Node { element: 1,

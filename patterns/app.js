@@ -87,4 +87,62 @@ import * as Module from './builder_pattern.js'
 
 var some_building_obj = new Module.Building()
 
-console.log(some_building_obj)
+// console.log(some_building_obj)
+
+
+
+
+const fetchPromise1 = fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+const fetchPromise2 = fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+const fetchPromise3 = fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+console.log("Started async requests that are NOT dependent on each other …");
+
+Promise.all([fetchPromise1, fetchPromise2, fetchPromise3]).then(res => {
+
+    // console.log(res)
+
+    res.forEach(res1 =>
+        res1.json().then(res => { console.log('ehllo') }))
+}).catch(err => console.log(err))
+
+
+// fetchPromise.then((response) =>
+
+//     // if (!response.ok) {
+//     //     catch (console.log("stop~"))
+//     // }
+
+//     // console.log(`Received response: ${response.status}`);
+//     // console.log(response.json())
+//     response.json()
+// ).then(res => console.log(res)).catch(error => { console.log('error: ' + error) })
+//     ;
+
+async function async_func() {
+
+    const fetchPromise11 = await fetch(
+        "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
+
+    const fetchPromise22 = await fetch(
+        "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
+
+    const fetchPromise33 = await fetch(
+        "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
+
+    console.log(fetchPromise11.json())
+
+}
+
+async_func()

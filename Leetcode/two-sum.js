@@ -1,7 +1,6 @@
 
 function twoSum(arr, target) {
     console.log(arr)
-
     return arr
 }
 

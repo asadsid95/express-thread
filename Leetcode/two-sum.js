@@ -11,5 +11,7 @@ twoSum(arr)
 const hash = new Map()
 
 for (item in arr){
-    console.log(item)
+
+    hash.set(item, )
+
 }

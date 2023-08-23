@@ -4,20 +4,20 @@
  */
 var climbStairs = function(n) {
     
-    var array = new Array(n)
-    
-    if(n <= 2){
-        return n
-    }
+    // 0th index indicates ground zero
+    var array = new Array(n+1)
 
-    for (let i = 2; i < n;  i++) {
+    if (n==1) return n
 
+    array[1] = 1;
+    array[2] = 2;
+
+    for(let i =3; i <= n; i++) {
         array[i] = array[i-1] + array[i-2]
-
     }
 
-    console.log(array)
-    return array.length
+    return array[n]
+    
 };
 
-console.log(climbStairs(3))
+console.log(climbStairs(6))

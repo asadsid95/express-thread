@@ -5,12 +5,8 @@ Approach:
 - 30 min to code the solution
 
 --------
-Excel Sheet Column Title
+Merge Intervals
 
-Problem: given a node of a connected undirected graph, return a deep copy (clone) of the graph 
+Problem: return an array of non-overlapping intervals that cover all intervals from the input, which is an array of arrays. These arrays contain 2 elements which indicate the start & end of the interval
 
 Approach:
-
-prior to clone the graph, I need to learn how to create a graph data structure
-
-See notes in GoodNote

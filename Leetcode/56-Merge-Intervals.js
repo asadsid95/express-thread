@@ -24,7 +24,7 @@ var merge = function(intervals) {
         const lastMergedInterval_result = result[result.length-1] // gets the last element of result[]
         
         if (currentInterval_intervals[0] <= lastMergedInterval_result[1]){
-            lastMergedInterval_result[1] = Math.max(currentInterval_intervals[1], currentInterval_intervals[1])
+            lastMergedInterval_result[1] = Math.max(lastMergedInterval_result[1], currentInterval_intervals[1])
         } else {
             result.push(currentInterval_intervals)
         }

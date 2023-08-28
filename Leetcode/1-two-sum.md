@@ -24,3 +24,11 @@ Brute Force method:
 - for each element, iterate over the array to check if any element adds to target;
 - example =  for the first integer, iterate over the arrray;  No element is found 
 -- for second integer, 5 doesnt add up. Skip over 4 itself and find 3 that adds up to target. return the second integer's index and integer 3's index in an array
+
+
+Method with hashtable # 1:
+
+- Iterate through num[] and add each element as key + its index as value
+- iterate again through num[], subtract each element from target; find difference in hash table and return its index
+
+- This is incorrect; if target = 8 and num = [1,3,4,2,5], it will subtract 

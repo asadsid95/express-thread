@@ -28,16 +28,16 @@ function twoSum(arr, target) {
         hashTable[ arr[i] ] = i // added elements from num[] and their indices in hash table
     }
 
-    console.log(hashTable)
     for(let i=0; i<arr.length; i++){
-        let diff
-
-        diff = target - arr[i]
-
-        console.log(diff)
-        console.log(i)
-        console.log(hashTable[diff])
+        let diff = target - arr[i]
+        
+        console.log("arr[i]: ", arr[i])
+        console.log("hashTable[diff]: ", hashTable[diff])
+        console.log('------')
         if(diff in Object.keys(hashTable)){
+            console.log('diff: ', diff)
+            console.log(hashTable)
+            console.log('yess')
             return [i, hashTable[diff]]
         }
     }
@@ -45,4 +45,6 @@ function twoSum(arr, target) {
 }
 arr = [1,3,4,2,5]
 
-console.log(twoSum(arr, 7))
+console.log(twoSum(arr, 8))
+
+// RESULT: for difference of ( 5 after subtracting 8-3 ) does not get return ; why not?

@@ -23,3 +23,6 @@ How can summing up be made possible without using the operators?
     and then what? how to add the 2 binary representations?
 
     JS allows for bitwise manipulation
+
+
+- Checked and following Neetcode's solution but unsure why carry only forms for & operation

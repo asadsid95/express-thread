@@ -32,3 +32,7 @@ Method with hashtable # 1:
 - iterate again through num[], subtract each element from target; find difference in hash table and return its index
 
 - This is incorrect; if target = 8 and num = [1,3,4,2,5], it will subtract 
+
+Method with hashtable # 2:
+- initialize empty hash table
+- iterate through num[], find difference between target and element; check if hashtable contains the diff; if not, add element to hash table and its index

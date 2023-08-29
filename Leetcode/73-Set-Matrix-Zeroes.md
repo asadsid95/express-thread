@@ -32,3 +32,8 @@ brute force:
     -- in each sub array (i.e. row), if a zero is contained, convert that array to zero.
     -- for the column, store the index of the 0-element, and iterate through remaining sub arrays and change the value to 0 for target index
 
+
+O(n^2) solution:
+- Iterate over the matrix and store in a temp [] the locations of the zeroes
+- Iterate again over the matrix to set the corresponding columns and rows to the zeroes' location, to zero
+

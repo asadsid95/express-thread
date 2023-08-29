@@ -7,3 +7,8 @@ Approach:
 --------
 
 Linked List Cycle
+
+Problem:
+- Given `head`, determine if the linked list has a cycle in it; return True
+- if a specific node can be reached again by continously following the `next` pointer of another node, LL has a cycle
+- `pos` denotes index of the node that tail's `next` is connected to, to indicate the cycle

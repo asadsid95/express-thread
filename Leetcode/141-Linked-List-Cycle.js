@@ -12,4 +12,41 @@
  */
 var hasCycle = function(head) {
     
+    // var slowPointer = head
+    // var fastPointer = head
+
+    // while(
+    //     slowPointer!== null &&
+    //     fastPointer!== null &&
+    //     fastPointer.next!== null) {
+
+    //         slowPointer=slowPointer.next
+    //         fastPointer=fastPointer.next.next
+
+    //         if(slowPointer === fastPointer){
+    //             return true
+    //         }
+
+    //     }
+    // return false
+
+    let slowPointer = head
+    let fastPointer = head
+
+    while(
+
+        fastPointer!== null &&
+        fastPointer.next!== null) {
+
+            slowPointer=slowPointer.next
+            fastPointer=fastPointer.next.next
+
+            if(slowPointer === fastPointer){
+                return true
+            }
+
+        }
+    return false
+
+
 };

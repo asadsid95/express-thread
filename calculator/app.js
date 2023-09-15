@@ -23,6 +23,7 @@ let display = document.getElementById('display')
 let first_digits = ''
 let operation = ''
 let second_digits = ''
+let result = ''
 
 // provide value to display element
 // function appendToDisplay(value) {
@@ -51,6 +52,40 @@ let second_digits = ''
 
 // }
 
+//(value == '+') || (value == '-') || (value == '*') || (value == '/')
 
+function appendToDisplay(value) {
+    if(first_digits === '' && operation === '') {
+        first_digits = value
+    } else if (first_digits !== '' && (value == '+') || (value == '-') || (value == '*') || (value == '/')) {
+        operation = value
+    } 
+    else if (first_digits !== '' && operation !=='') {
+        second_digits = value
+    }
 
+    console.log("first_digits: ", first_digits)
+    console.log("second_digits: ", second_digits)
+    console.log("operation: ", operation)
+}
 
+function calculateResult(){
+    first_digits = parseInt(first_digits)
+    second_digits = parseInt(second_digits)
+
+    switch(operation){
+        
+        case "+":
+            console.log(first_digits + second_digits)
+            break
+        case "-":
+            console.log(first_digits - second_digits)
+            break
+        case "*":
+            console.log(first_digits * second_digits)
+        break
+        case "/":
+            console.log(first_digits / second_digits)
+        break
+        }
+}

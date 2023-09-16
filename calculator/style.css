@@ -2,10 +2,11 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: black;
+    font-size: 16px;
 }
 
 .calculator {
-    width: 300px;
+    width: 50vh;
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #ccc;
@@ -13,8 +14,25 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.clear {
+    font-weight: 600;
+}
+
+.clear:hover{
+    background-color: orange;
+}
+
+.sign{
+    font-size: 20px;
+    background-color: #5e5e5e;
+}
+
+.sign:hover{
+    background-color: #5e5e5e;
+}
+
 .screen input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     font-size: 24px;
     text-align: right;
@@ -36,7 +54,7 @@ button {
 }
 
 button:hover {
-    background-color: #5e5e5e;
+    background-color: #c4c4c4;
 }
 
 button:active {

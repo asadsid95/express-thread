@@ -1,91 +1,92 @@
-// ask user to enter first digits
+let display = document.getElementById('display')
+let first_digits = ''
+let operator = ''
+let second_digits = ''
+let result = ''
 
-// ask user to select operation 
+function input(value) {
 
-// ask user to enter second digits
+    // add to first_digits only
+    if(operator === '' && second_digits === '') {
 
-// ask user to select = sign
+        // prevents decimals flooding
+        if(value === '.') {
+            if(first_digits.indexOf(value) === -1) {
+                first_digits += value
+            } 
+        } else {
+            first_digits += value
+            display.value = first_digits
+        }
+    }
+    // add to second_digits; if operator is not empty string
+    else if (operator !== '') {
+        // if operator is selected without choosing first_digits, assign first_digits 0
+        // else if value is decimal, check if it already exists in second_digits
+        // else add value to second_digits and show it in display
+        if (first_digits === '') {
+            first_digits = '0'
+        } else if(value === '.') {
+    
+            // prevents decimals flooding
+            if(second_digits.indexOf(value) === -1) {
+                second_digits += value
+            } 
+        } else {
+            second_digits += value
+            display.value = second_digits
+        }
+    }
 
-// select display element
+    console.log("first_digits: ", first_digits)
+    console.log("second_digits: ", second_digits)
+    console.log("operator: ", operator)
+}
+
+function operation(value) {
+    operator = value
+}
+
+function calculateResult() {
+    first_digits = parseFloat(first_digits)
+    second_digits = parseFloat(second_digits)
+    let result=''
+
+    switch(operator){
+        case "+":
+            result = first_digits + second_digits
+            display.value = result
+            break
+        case "-":
+            result = first_digits - second_digits
+            display.value = result
+
+            break
+        case "*":
+            result = first_digits * second_digits
+            display.value = result
+
+        break
+        case "/":
+            if( second_digits === 0) {
+                return display.value = 'Error'
+            } else {
+                result = first_digits / second_digits
+                display.value = result
+            }
+
+        break
+        }
+
+}
+
 function clearDisplay() {
 
     // change display element's value to 0
     digits = ''
     display.value = 0
-}
-
-function calculateResult() {
-
-}
-
-
-let display = document.getElementById('display')
-let first_digits = ''
-let operation = ''
-let second_digits = ''
-let result = ''
-
-// provide value to display element
-// function appendToDisplay(value) {
-
-//     {/* 
-//         check if value is decimal 
-//             - if digits don't have a decimal 
-//               add decimal to digits 
-//         else, add non-decimal value to digits
-
-//     */} 
-//     if (value === '.'){
-//         if(first_digits.indexOf('.') == -1 ){
-//             first_digits += value
-
-//         } 
-//         // else {
-//         //     // if decimal does exist, it should do nothing
-//         // }
-//     } else {
-//         first_digits += value
-//         display.value = first_digits
-//     }
-
-//     // edge case: preventing leading zeros
-
-// }
-
-//(value == '+') || (value == '-') || (value == '*') || (value == '/')
-
-function appendToDisplay(value) {
-    if(first_digits === '' && operation === '') {
-        first_digits = value
-    } else if (first_digits !== '' && (value == '+') || (value == '-') || (value == '*') || (value == '/')) {
-        operation = value
-    } 
-    else if (first_digits !== '' && operation !=='') {
-        second_digits = value
-    }
-
-    console.log("first_digits: ", first_digits)
-    console.log("second_digits: ", second_digits)
-    console.log("operation: ", operation)
-}
-
-function calculateResult(){
-    first_digits = parseInt(first_digits)
-    second_digits = parseInt(second_digits)
-
-    switch(operation){
-        
-        case "+":
-            console.log(first_digits + second_digits)
-            break
-        case "-":
-            console.log(first_digits - second_digits)
-            break
-        case "*":
-            console.log(first_digits * second_digits)
-        break
-        case "/":
-            console.log(first_digits / second_digits)
-        break
-        }
+    result = ''
+    first_digits = ''
+    second_digits = ''
+    operator = ''
 }

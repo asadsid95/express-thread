@@ -40,3 +40,20 @@ function calculateTax(income: number, taxYear?): number {
 }
 
 calculateTax(4000)
+
+// object
+
+let employee: {
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+    name: 'Mosh',
+    retire: (date: Date) => {
+        console.log(date)
+    }
+
+}
+
+// advanced types: type aliass, unions and intersections, type narrowing, nullable types, unknown and never types

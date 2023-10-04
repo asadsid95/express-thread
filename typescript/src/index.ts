@@ -104,3 +104,9 @@ let textBox: UIwidget = {
     drag: () => { },
     resize: () => { }
 }
+
+// literal types
+// to limit values
+type Quantity = 50 | 100;
+let quantity: Quantity = 100
+

@@ -75,7 +75,7 @@ let employee1: Employee = {
 
 }
 
-// Unions and intersections 
+// Unions
 function kgToLbs(weight: number | string): number {
 
     // can accept number or string
@@ -87,4 +87,20 @@ function kgToLbs(weight: number | string): number {
         return parseInt(weight) * 2.3
     }
 
+}
+
+// Intersections
+type Draggable = {
+    drag: () => void
+}
+
+type Resizable = {
+    resize: () => void
+}
+
+type UIwidget = Draggable & Resizable
+
+let textBox: UIwidget = {
+    drag: () => { },
+    resize: () => { }
 }

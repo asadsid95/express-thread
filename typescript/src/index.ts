@@ -57,3 +57,34 @@ let employee: {
 }
 
 // advanced types: type aliass, unions and intersections, type narrowing, nullable types, unknown and never types
+// type alias
+type Employee = {
+    // define properties and methods
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+
+}
+
+let employee1: Employee = {
+    id: 1,
+    name: 'Mosh',
+    retire: (date: Date) => {
+        console.log(date)
+    }
+
+}
+
+// Unions and intersections 
+function kgToLbs(weight: number | string): number {
+
+    // can accept number or string
+
+    // use narrow
+    if (typeof weight === 'number') {
+        return weight * 2.3
+    } else {
+        return parseInt(weight) * 2.3
+    }
+
+}

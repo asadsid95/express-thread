@@ -110,3 +110,13 @@ let textBox: UIwidget = {
 type Quantity = 50 | 100;
 let quantity: Quantity = 100
 
+// nullable types
+function sayName(name: string | null | undefined) {
+    if (name)
+        console.log(name.toLocaleLowerCase())
+    else
+        console.log('Asad')
+}
+sayName(null) // this would be valid vanilla JS but will be incorrect
+// strictNullablechecks setting
+sayName('Sidrah')
